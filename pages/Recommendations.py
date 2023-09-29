@@ -7,7 +7,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 from PIL                  import Image
 
 def load_data():
-    df_ratings = pd.read_csv('data/Ratings.csv', nrows=100000, low_memory=False)
+    df_ratings = pd.read_csv('data/Ratings.csv', nrows=50000, low_memory=False)
     df_books = pd.read_csv('data/Books.csv', low_memory=False)
     
     return df_ratings, df_books

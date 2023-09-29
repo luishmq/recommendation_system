@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 import streamlit as st
 from scipy.sparse import csr_matrix
+import sklearn
 from sklearn.metrics.pairwise import cosine_similarity
 from PIL                  import Image
 

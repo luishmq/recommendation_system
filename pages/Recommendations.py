@@ -87,7 +87,7 @@ st.sidebar.image(image)
 # Interface de entrada do usuário
 user_input = st.text_input("Digite o nome do livro desejado:")
 
-if user_input:
+if st.button("Recomendar"):
     # Verificar se o livro está na base de dados
     if user_input in books_pivot.index:
         recommendations_with_images = recommend(user_input, df2_filtered)

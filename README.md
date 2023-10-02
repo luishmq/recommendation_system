@@ -18,17 +18,34 @@ Data for analysis were made available within the data competitions platform [Kag
 - Using machine learning algorithms and recommendation techniques, it will be possible to analyze the behavior and preferences of each user based on their purchase history and interactions with books. The personalized recommendation model will consider this information to make book suggestions that are highly relevant and interesting for each user.
 - The solution will consist of creating a personalized book recommendation model, which will analyze each user's purchase history and preferences to offer personalized suggestions.
 
-Create a personalized book recommendation model to provide accurate and relevant suggestions to users.
-
 # 2.0 Business Assumptions
 
-The sample dataset summarizes the behavior of 3,150 Amazon customers.
+- The sample dataset summarizes the behavior of 3,150 Amazon customers.
+- One of the datasets ( Ratings ) has approximately 1149780 reviews
 
 ## 2.1 Data Description
 
+- Users.csv:
+
 Variável | Definição
 ------------ | -------------
-ISBN | Código|
+User-ID | ID do cliente |
+Location | Localidade |
+Age | Idade |
+
+- Ratings.csv:
+
+Variável | Definição
+------------ | -------------
+User-ID	 | ID do cliente |
+ISBN | Código |
+Book-Rating | Avaliação do livro ( 0 a 10 )|
+
+- Books.csv:
+
+Variável | Definição
+------------ | -------------
+ISBN | Código |
 Book-Title | Nome do livro|
 Book-Author | Autor do livro|
 Year-Of-Publication | O ano que ele foi publicado|
@@ -39,9 +56,17 @@ Image-URL-L | URL|
 
 # 3.0 Solution Strategy
 
+![](imgs/mind.png)
+
 # 4.0 Some insights
 
+### Top 10 Most Popular Books:
+
 ![](imgs/popular_books.png)
+
+### Scatterplot about the number of reviews per user:
+
+- We need a minimum number of reviews per user for the machine learning model to work well.
 
 ![](imgs/scatter.png)
 
@@ -59,9 +84,15 @@ Two Machine Learning techniques were applied:
 
 ![](imgs/recommendations.png)
 
-# 7.0 Deployment
+# 7.0 Deployment in Streamlit Cloud
 
-Streamlit Cloud.
+Development of a streamlit page capable of building a list of suggestions based on the initial choice of a book.
+
+Due to the size of the dataset, it was necessary to reduce it to 50 thousand lines.
+
+The Recommendation System can be accessed through this link: [Streamlit link](https://books-recommendation-system.streamlit.app/)
+
+![](imgs/streamlit.png)
 
 # 8.0 Conclusions
 
@@ -74,6 +105,7 @@ Using machine learning algorithms and recommendation techniques as NearestNeighb
 - How to build recommendation systems
 - NearestNeighbors technique
 - Cossine Similarity technique
+- Show images for each recommendation in Streamlit Cloud
 
 # 10.0 Next Steps
 

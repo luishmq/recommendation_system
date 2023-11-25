@@ -1,4 +1,4 @@
-# Recommendation System Project 💡
+# Books Recommendation System Project 💡
 
 ![](imgs/system_img.png)
 
